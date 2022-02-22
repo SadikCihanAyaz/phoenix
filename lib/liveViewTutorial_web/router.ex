@@ -8,6 +8,7 @@ defmodule LiveViewTutorialWeb.Router do
     plug :put_root_layout, {LiveViewTutorialWeb.LayoutView, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    plug LiveViewTutorialWeb.Plugs.Locale, "en"
   end
 
   pipeline :api do
