@@ -21,6 +21,7 @@ defmodule LiveViewTutorialWeb.Router do
     get "/", PageController, :index
     get "/example1", Example1Controller, :index
     get "/example1/:message", Example1Controller, :showIm
+    get "/hello", HelloController, :index
   end
 
   # Other scopes may use custom stacks.
