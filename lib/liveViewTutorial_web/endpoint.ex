@@ -46,6 +46,7 @@ defmodule LiveViewTutorialWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
+  plug :cihan
   plug :introspect
   plug LiveViewTutorialWeb.Router
 
@@ -54,6 +55,15 @@ defmodule LiveViewTutorialWeb.Endpoint do
     Verb: #{inspect(conn.method)}
     Host: #{inspect(conn.host)}
     Headers: #{inspect(conn.req_headers)}
+    """
+
+    conn
+  end
+
+
+  def cihan(conn, _opt) do
+    IO.puts """
+    first function plug is written by cihan.
     """
 
     conn
